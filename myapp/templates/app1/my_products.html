@@ -1,0 +1,12 @@
+<!-- django_m53_2/templates/app1/my_products.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Mis productos</h2>
+  <ul>
+    {% for product in products %}
+      <li>{{ product.name }} - Precio: {{ product.price }} - Stock: {{ product.stock }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
